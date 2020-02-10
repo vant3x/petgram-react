@@ -4,8 +4,9 @@
   "description": "clon de instagram para mascotas en react",
   "main": "index.js",
   "scripts": {
+    "now-build": "npm run build",
     "build": "webpack",
-    "lint":"standard",
+    "lint": "standard || exit 0",
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +18,7 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
+    "prettier-eslint": "^9.0.1",
     "standard": "^14.3.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
@@ -24,6 +26,17 @@
   },
   "dependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "/api/**"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
